@@ -14,24 +14,35 @@
 
     <title>Frontend Mentor | Product preview card component</title>
   </head>
-  <body class="bg-Cream text-sm font-montserrat">
-    <div id="card" class="bg-White mx-4 my-6 rounded-md">
-      <div id="image-container" class="mb-5">
+  <body
+    class="bg-Cream text-sm font-montserrat h-screen flex flex-col items-center justify-center">
+    <div
+      id="card"
+      class="bg-White mx-4 my-6 rounded-md md:flex md:max-w-2xl md:items-center md:justify-center md:mx-auto">
+      <div id="image-container" class="mb-5 md:mb-0 max-w-sm">
         <img
           src="./images/image-product-mobile.jpg"
           alt=""
-          class="rounded-t-md md:rounded-none" />
+          class="block rounded-t-md md:hidden" />
+        <img
+          src="./images/image-product-desktop.jpg"
+          alt=""
+          class="hidden md:block" />
       </div>
-      <div id="card-body" class="px-5 text-Dark-grayish-blue pb-6">
-        <p class="mb-2 spa tracking-widest-three">PERFUME</p>
-        <h1 class="font-fraunces text-Very-dark-blue font-700 text-3xl mb-4">
+
+      <div
+        id="card-body"
+        class="px-5 text-Dark-grayish-blue pb-6 max-w-xs mx-auto">
+        <p class="mb-4 md:mb-8 spa tracking-widest-three">PERFUME</p>
+        <h1
+          class="font-fraunces text-Very-dark-blue font-700 text-4xl mb-4 md:mb-8">
           Gabrielle Essence Eau De Parfum
         </h1>
-        <p class="mb-4">
+        <p class="mb-4 md:mb-8">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-        <p class="mb-4">
+        <p class="mb-4 md:mb-8">
           <span class="text-Dark-cyan font-fraunces font-700 text-4xl mr-4"
             >$149.99</span
           >

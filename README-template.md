@@ -16,7 +16,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Overview
 
-Create product preview card with both mobile and desktop view.
+I created a product preview card with both mobile and desktop view. I wanted to do this using vite to gain experience with other build tools and im also am trying to get more familiar with tailwind css. I appreciate any feed back but im specificity looking for feed back on ways to clean up my tailwind css.
 
 ### The challenge
 
@@ -32,11 +32,11 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:(https://product-preview-card-tawny-two.vercel.app/)
+- Solution URL:(<https://product-preview-card-tawny-two.vercel.app/>)
 
 ## My process
 
-I wanted to make this card mainly as a way to learn and practice tailwind. I used a mobile first approach however I used more old school spacing methods.
+I wanted to make this card mainly as a way to learn and practice tailwind. I used a mobile first approach however I used more old school spacing methods. I focused on splitting the image and text in too separate sections that would allow me to shift there positions based on the width of the screen.
 
 ### Built with
 
@@ -47,11 +47,15 @@ I wanted to make this card mainly as a way to learn and practice tailwind. I use
 
 ### What I learned
 
-The main thing i learned during this project was how to use tailwinds config file to customize my options. I found out how to add the stylized font family, colors and letter spacing.
+First, i learned how to use tailwinds config file to customize my options. Below you can see and example of my config used to add stylized font family, colors, and letter spacing. Tailwind has some interesting customization that im just scratching the surface of here. Second, I learned a bit about config files and how they interact with Vite. While trying to set up tailwind, I ran into some issues with the postcss config. Its my understanding that in Vite all config files must end in .cjs instead of .js otherwise you will run into errors. Finally another tailwind gremlin I came across is where the css file is placed. If the css file is placed in the public folder, vite will tell you that its ok to only use the url after the folder however, tailwind wont be able to understand that so you must write out the entire url from the project folder. See below.
 
-Vite? config files. .cjs/.js
+link to css in html
+incorrect: /css/styles.css;
+correct: ./public/css/styles.css;
 
-```
+tailwind.config.cjs
+
+```javascript
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
 
@@ -93,15 +97,12 @@ module.exports = {
   },
   plugins: [],
 };
-
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 ### Continued development
 
-I would like to continue getting familiar with tailwind. I need to work on adding flexbox and grid to my tool belt.
+I would like to continue getting familiar with both tailwind and vite. Within tailwind I need to work on being more comfortable with flexbox and grid.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@AshtonHarvey](https://www.frontendmentor.io/profile/AshtonHarvey)
